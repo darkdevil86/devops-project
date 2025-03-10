@@ -21,8 +21,8 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v2
         with:
-          username: darkdevil086
-          password: w47k3r83542
+          username: ${{ secrets.DOCKERUSERNAME }}
+          password: ${{ secrets.DOCKERPASSWORD }}
 
       - name: Push Docker Image
         run: docker tag devops-app:latest <YOUR_DOCKER_REGISTRY>/devops-app:latest && docker push <YOUR_DOCKER_REGISTRY>/devops-app:latest
