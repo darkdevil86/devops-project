@@ -25,7 +25,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker Image
-        run: docker tag flask-api:latest <YOUR_DOCKER_REGISTRY>/flask-api:latest && docker push <YOUR_DOCKER_REGISTRY>/flask-api:latest
+        run: docker tag flask-api:latest flask-api/flask-api:latest && docker push flask-api/flask-api:latest
 
       - name: Set up Kubectl
         uses: azure/setup-kubectl@v3
